@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Main */
+body {
+    margin: 0;
+    font-family: Plus Jakarta Sans;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 800;
+}
+
+a:hover {
+    color: hsl(219, 85%, 26%);
+} 
+
+/* Title */
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    font-weight: 800;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+}
+
+.title span {
+    background: hsl(219, 85%, 26%);
+    color: #fff;
+    font-size: 1.1255rem;
+    padding: 3px 11px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.title a {
+    font-weight: 400;
+}
+
+/* Notifications (Bassically the rest) */
+.notifications {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.notification img {
+    height: 100px;
+}
+
+.notification p {
+    margin: 0;
+    margin-left: 20px;
+}
+
+.notification.unread {
+    background: hsl(211, 68%, 94%);
+    border-radius: 10px;
+}
+
+.unread-circle {
+    width: 12px;
+}
+
+
+
+.private-message {
+    flex-wrap: wrap;
+}
+
+.message { 
+    flex-basis: 100%
+}
