@@ -22,69 +22,84 @@
         <h1>Notifications</h1>
         <span>3</span>
       </div>
-      <a href="#">Mark all as read</a>
+      <a href="#" id="read">Mark all as read</a>
     </div>
 
     <div class="notifications">
       <div class="notification unread">
         <img src="assets/images/avatar-mark-webber.webp" alt="mark webber">
-        <p><a href="#">Mark Webber</a> reacted to your recent post My first tournament today! 
-          <img class="unread-circle" src="assets/images/circle.svg" alt="circle"><br> 1m ago
+        <p><a href="#">Mark Webber</a> reacted to your recent post 
+          <a href="#" class="inline-link">My first tournament today!</a> 
+          <img class="unread-circle" src="assets/images/circle.svg" alt="circle"><br>
+          <span>1m ago</span>
         </p>
       </div>
       <div class="notification unread">
         <img src="assets/images/avatar-angela-gray.webp" alt="mark webber">
         <p><a href="#">Angela Gray</a> followed you 
-          <img class="unread-circle" src="assets/images/circle.svg" alt="circle"><br> 5m ago
+          <img class="unread-circle" src="assets/images/circle.svg" alt="circle"><br>
+          <span>5m ago</span>
         </p>
       </div>
       <div class="notification unread">
         <img src="assets/images/avatar-jacob-thompson.webp" alt="mark webber">
-        <p><a href="#">Jacob Thompson</a> has joined your group Chess Club
-          <img class="unread-circle" src="assets/images/circle.svg" alt="circle"><br> 1 day ago
+        <p><a href="#">Jacob Thompson</a> has joined your group 
+          <a href="#" class="group">Chess Club</a>
+          <img class="unread-circle" src="assets/images/circle.svg" alt="circle"><br>
+          <span>1 day ago</span>
         </p>
       </div>
-      <div class="notification private-message">
+      <div class="notification">
         <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="mark webber">
-        <p><a href="#">Rizky Hasanuddin</a> sent you a private message <br> 5 day ago </p>
-        <div class="message">
-          <p>
-            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-            I'm already having lots of fun and improving my game.
+        <div class="message-notification">
+          <p><a href="#">Rizky Hasanuddin</a> sent you a private message <br>
+            <span>5 day ago</span>
           </p>
+          <div class="message">
+            <p>
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+              I'm already having lots of fun and improving my game.
+            </p>
+          </div>
         </div>
       </div>
       <div class="notification">
         <img src="assets/images/avatar-kimberly-smith.webp" alt="mark webber">
-        <p><a href="#">Kimberly Smith</a> commented on your picture <br> 1 week ago </p>
-        <img src="assets/images/image-chess.webp" alt="Chess">
+        <p><a href="#">Kimberly Smith</a> commented on your picture <br><span>1 week ago</span></p>
+        <img class="picture" src="assets/images/image-chess.webp" alt="Chess">
       </div>
       <div class="notification">
         <img src="assets/images/avatar-nathan-peterson.webp" alt="mark webber">
-        <p><a href="#">Nathan Peterson</a> reacted to your recent post 5 end-game strategies to increase 
-        your win rate <br> 2 weeks ago </p>
+        <p><a href="#">Nathan Peterson</a> reacted to your recent post 
+        <a href="#" class="inline-link">5 end-game strategies to increase your win rate</a> 
+        <br><span>2 weeks ago</span></p>
       </div>
       <div class="notification">
         <img src="assets/images/avatar-anna-kim.webp" alt="mark webber">
-        <p><a href="#">Anna Kim</a> left the group Chess Club <br> 2 weeks ago </p>
+        <p><a href="#">Anna Kim</a> left the group 
+          <a href="#" class="group">Chess Club</a><br><span>2 weeks ago</span>
+        </p>
       </div>
     </div>
   </div>
-  
 
 
-   
-  
-
-  
-  
-
-   
-  
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a><br> 
+    Coded by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">JustImp</a>
   </div>
+
+  <script>
+
+
+    document.getElementById("read").addEventListener("click", () => {
+      document.querySelectorAll(".unread").forEach((notification) => {
+        notification.classList.remove("unread");
+        notification.querySelector(".unread-circle").remove();
+      })
+    }) 
+
+    
+  </script>
 </body>
 </html>

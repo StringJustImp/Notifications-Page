@@ -5,6 +5,7 @@ body {
     margin: 0;
     font-family: Plus Jakarta Sans;
     box-sizing: border-box;
+
 }
 
 .container {
@@ -17,6 +18,17 @@ a {
     text-decoration: none;
     color: #000;
     font-weight: 800;
+    margin-right: 5px;
+}
+
+a.group {
+    color: hsl(219, 85%, 26%);
+    margin-left: 5px;
+}
+
+a.inline-link {
+    color: #666;
+    margin-left: 5px;
 }
 
 a:hover {
@@ -64,15 +76,22 @@ a:hover {
     display: flex;
     margin-bottom: 20px;
     padding: 10px;
+    transition: all 0.8s;
 }
 
-.notification img {
-    height: 100px;
+.notification img:not(.unread-circle) {
+    height: 50px;
 }
 
 .notification p {
+    color: #666;
     margin: 0;
     margin-left: 20px;
+    line-height: 1.5;
+}
+
+.notification p span {
+    color: #999;
 }
 
 .notification.unread {
@@ -80,16 +99,83 @@ a:hover {
     border-radius: 10px;
 }
 
-.unread-circle {
-    width: 12px;
+.notification .picture {
+    cursor: pointer;
+    margin-left: auto;
 }
 
+.notification .picture:hover {
+    border: solid 3px #eee;
 
+    border-radius: 10px;
+}
 
-.private-message {
+.unread-circle {
+    width: 12px;
+    margin-left: 5px;
+}
+
+/* Message */
+.message-notification {
     flex-wrap: wrap;
 }
 
 .message { 
-    flex-basis: 100%
+    margin-top: 10px;
+    flex-basis: 100%;
+}
+
+.message p {
+    padding: 0.7rem 1rem;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+
+}
+
+/* Attributions  */
+.attribution {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    font-size: 12px; 
+    text-align: center;
+    bottom: 0;
+}
+
+.attribution a { 
+    text-decoration: none;
+    font-weight: bold;
+    color: hsl(228, 45%, 44%); 
+}       
+
+.attribution a:hover {
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+.attribution a:focus {
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+@media(min-width: 1100px) {
+    body {
+        background: hsl(222, 39%, 94%);
+    }
+
+    .container {
+        background: #fff;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        border-radius: 30px;
+    }
+
+    .notification {
+        margin-bottom: 30px;
+    }
 }
